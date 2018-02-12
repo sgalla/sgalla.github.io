@@ -5,17 +5,13 @@
   </head>
   <body>
     <h2>Hello, Internet how ya doin? I'm doin fine I'm doin okay!</h2>
+    <button id="button1" onclick="changeButtonColor()">Click me to change color!</button> 
     <div id="viz"></div>
     <script type="text/javascript">
-    
-      d3.select('body').style("background-color","#D8D8D8");
+    function changeButtonColor() {
+        document.getElementById("button1").style.background='red';
+      }
       
-      d3.select('h2').style("color", "blue");
-      
-      d3.select('h2').style("color", 
-        function() {return "rgb(" + Math.random() * 255 + ",100,50)";});
-        
-      d3.select('h2').text("What?");
       
     </script>
   </body>
